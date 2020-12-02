@@ -6,15 +6,63 @@
   <meta name="description" content="">
   <meta name="robots" content="">
   <meta name=viewport content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <link rel="shortcut icon" type=image/png href=favicon.jpg>
+  <script src="https://kit.fontawesome.com/3aa344abb3.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <link rel=stylesheet type=text/css href=./css/bootstrap.css>
   <link rel=stylesheet type=text/css href=style.css>
   <script src="script.js"></script>
   <title>Orinoco, Produit</title>
 </head>
-<body>
-  ...
-  <!-- une page “produit”, qui affiche de manière dynamique l'élément sélectionné par l'utilisateur et lui permet de personnaliser le produit et de l'ajouter à son panier -->
-  ...
+
+ <!-- une page “produit”, qui affiche de manière dynamique l'élément sélectionné par l'utilisateur et lui permet de personnaliser le produit et de l'ajouter à son panier -->
+
+<body class="container">
+
+  <!--header-->
+  <header class="">
+    <h1>
+      <img src="img/logo_Orinoco.png" alt="logo Onorico">
+    </h1>
+    <nav class="">
+      <a href="Accueil.html" class="">Accueil</a>
+      <a href="Panier.html" class=""><i class="fas fa-shopping-basket">Panier</a>
+    </nav>
+  </header>
+
+  <!--Page produit-->
+  <main id="main">
+    <div id="error">
+      <i id="error__logo" class="fas fa-exclamation-triangle"></i>
+      <p id="error__msg">Désolé une erreur avec l'API est survenue, ou la page démandée n'existe pas ! Veuillez réesayer</p>
+    </div>
+    <section>
+      <h2>Nom du produit</h2>
+      <div class="">
+        <div class="">
+          <img src="" id="" alt="Photo du produit">
+        </div>
+
+        <div class="">
+          <p class="">Description :</p>
+          <label for="">Choisissez votre option :</label>
+          <select name="" id="">
+            <option value="">Faites votre choix</option>
+          </select>
+          <p>Prix :</p>
+          <div class="">
+            <button class="">Mettre dans le panier</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!--footer-->
+  <footer>
+      <p>Copyright © 2020 Oursinoco by Orinoco - Tous droits réservés</p>
+      <p>Projet 5 - Parcours Developpeur Web - OpenClassrooms</p>
+  </footer>
+
 </body>
 </html>
