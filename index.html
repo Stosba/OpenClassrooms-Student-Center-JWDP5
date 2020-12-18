@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="keywords" content="">
+  <meta name="description" content="Bienvenue chez Onrinoco, vous trouverez ici de magnifiques ours en peluche faits à la main afin que vos enfants dorment sur leurs deux oreilles !">
+  <meta name="robots" content="index, follow">
+  <meta name=viewport content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <script src="https://kit.fontawesome.com/3aa344abb3.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel=stylesheet type=text/css href=./css/bootstrap.css>
+  <link rel=stylesheet type=text/css href=style.css>
+  
+  <title>Orinoco, Accueil</title>
+</head>
+
+  <!-- une page de vue sous forme de liste, montrant tous les articles disponibles à la vente -->
+
+<body class="Accueil container">
+
+	<!--header-->
+	<header class="container">
+		<h1 class="row">
+			<img srcset="elva-fairy-320w.jpg 320w, elva-fairy-480w.jpg 480w, elva-fairy-800w.jpg 800w" sizes="(max-width: 320px) 280px, (max-width: 480px) 440px, 800px" src="img/logo_Orinoco.png" alt="logo Orinoco">
+		</h1>
+		<nav class="col navbar navbar-expand-lg bg-dark">
+			<a class="navbar-brand" href="index.html">Orinoco</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
+				<span class="navbar-toggler-icon"></span>
+			 </button>
+			 <div id="navbarContent" class="collapse navbar-collapse">
+				<ul class="navbar-nav">
+					<li class="nav-item active">
+						<a href="index.html" class="">Accueil</a>
+					</li>
+					<li class="nav-item">
+						<a href="panier.html" class=""><i class="fas fa-shopping-basket">Panier</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+
+	<!--Page d'accueil-->
+	<main class="container">
+		<div id="error">
+      		<i id="error__logo" class="fas fa-exclamation-triangle"></i>
+      		<p id="error__msg">Désolé une erreur avec l'API est survenue, ou la page démandée n'existe pas ! Veuillez réesayer</p>
+    	</div>
+
+		<section class="row">
+          <h2 class="col-12">
+            <img src="" alt="Oursinoco - Vente en ligne d'ours en peluche faits à la main"/>
+          </h2>
+        </section>
+
+        <section id="listeProduit">
+          <h3>Votre magasin en ligne d'ours en peluche faits à la main</h3>
+        </section>
+	</main>
+
+	<!--footer-->
+	<footer class="container">
+		  <p>Copyright © 2020 Oursinoco by Orinoco - Tous droits réservés</p>
+          <p>Projet 5 - Parcours Developpeur Web - OpenClassrooms</p>
+	</footer>
+
+	<!--Script JS-->
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	<script src="script.js"></script>
+
+</body>
+</html>
