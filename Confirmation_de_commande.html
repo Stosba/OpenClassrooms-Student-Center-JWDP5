@@ -9,9 +9,8 @@
   <script src="https://kit.fontawesome.com/3aa344abb3.js" crossorigin="anonymous"></script>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel=stylesheet type=text/css href=./css/bootstrap.css>
-  <link rel=stylesheet type=text/css href=style.css>
+  <link rel=stylesheet type=text/css href=css/style.css>
   <script src="script.js"></script>
   <title>Orinoco, Confirmation de commande</title>
 </head>
@@ -28,7 +27,11 @@
   </header>
 
   <!--Confirmation de commande-->
-  <section class="">
+  <section class="container">
+    <div class="alert alert-success" role="alert">
+      Félicitations ! Vous avez réussi !
+   </div>
+
     <div class="">
       <i class="fas fa-check"></i>
       <h2 class="">Merci pour votre achat <span id="lastName"></span> !</h2>
@@ -42,9 +45,9 @@
   </section>
 
   <!--footer-->
-  <footer>
-      <p>Copyright © 2020 Oursinoco by Orinoco - Tous droits réservés</p>
-      <p>Projet 5 - Parcours Developpeur Web - OpenClassrooms</p>
+	<footer class="container black bg-dark py-3">
+    <p>Copyright © 2020 Oursinoco by Orinoco - Tous droits réservés</p>
+    <p>Projet 5 - Parcours Developpeur Web - OpenClassrooms</p>
   </footer>
   	<!--Script JS-->
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
