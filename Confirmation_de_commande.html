@@ -20,35 +20,52 @@
 <body>
 
   <!--header-->
-  <header class="">
-    <h1>
-      <img class="" src="img/logo_Onorico.png" alt="Logo Orinoco">
-    </h1>
-  </header>
+	<header>
+		<h1 class="row">
+			<img class="col" src="img/logo_Orinoco.png" width="auto" height="400" alt="logo Orinoco">
+		</h1>
+		<nav class="row navbar navbar-expand-lg navbar-dark bg-dark">
+			<div class="container">
+				<a class="navbar-brand" href="index.html">Orinoco</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
+					<span class="navbar-toggler-icon"></span>
+				 </button>
+				 <div id="navbarContent" class="collapse navbar-collapse text-light">
+					<ul class="navbar-nav">
+						<li class="col-6 nav-item">
+							<a href="index.html" class="text-reset text-decoration-none">Accueil</a>
+						</li>
+						<li class="col-6 nav-item">
+							<a href="panier.html" class="text-reset text-decoration-none">Panier</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
 
   <!--Confirmation de commande-->
-  <section class="container">
-    <div class="alert alert-success" role="alert">
+  <section class="row">
+    <div class="col-12 alert alert-success" role="alert">
       Félicitations ! Vous avez réussi !
-   </div>
+    </div>
 
-    <div class="">
-      <i class="fas fa-check"></i>
-      <h2 class="">Merci pour votre achat <span id="lastName"></span> !</h2>
-      <div class="">
+    <div class="col-6 mx-auto">
+     <h2><i class="fas fa-check"></i> Merci pour votre achat <span id="lastName"></span> !</h2>
+      <div class="col-6">
         <p>numéro de commande : <span id="orderId"></span></p>
       </div>
     </div>
-    <nav class="">
-      <p>Pour revenir à l'accueil de notre boutique cliquez sur ce lien <a href="index.html">Accueil</a></p>
-    </nav>
   </section>
 
   <!--footer-->
-	<footer class="container black bg-dark py-3">
-    <p>Copyright © 2020 Oursinoco by Orinoco - Tous droits réservés</p>
-    <p>Projet 5 - Parcours Developpeur Web - OpenClassrooms</p>
-  </footer>
+	<footer class="black bg-dark py-3 text-light">
+		<div class="container">
+			<p>Copyright © 2020 Oursinoco by Orinoco - Tous droits réservés</p>
+			<p>Projet 5 - Parcours Developpeur Web - OpenClassrooms</p>
+		</div>
+	</footer>
+
   	<!--Script JS-->
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

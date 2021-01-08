@@ -17,49 +17,55 @@
 
  <!-- une page “produit”, qui affiche de manière dynamique l'élément sélectionné par l'utilisateur et lui permet de personnaliser le produit et de l'ajouter à son panier -->
 
-<body class="container">
+<body>
 
   <!--header-->
-	<header class="container">
+	<header>
 		<h1 class="row">
-			<img class="col" src="img/logo_Orinoco.png" width="auto" height="auto lg-300" alt="logo Orinoco">
+			<img class="col" src="img/logo_Orinoco.png" width="auto" height="400" alt="logo Orinoco">
 		</h1>
 		<nav class="row navbar navbar-expand-lg navbar-dark bg-dark">
-			<a class="navbar-brand" href="index.html">Orinoco</a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
-				<span class="navbar-toggler-icon"></span>
-			 </button>
-			 <div id="navbarContent" class="collapse navbar-collapse">
-				<ul class="navbar-nav">
-					<li class="col-6 nav-item">
-						<a href="index.html">Accueil</a>
-					</li>
-					<li class="col-6 nav-item">
-						<a href="panier.html">Panier</a>
-					</li>
-				</ul>
+			<div class="container">
+				<a class="navbar-brand" href="index.html">Orinoco</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
+					<span class="navbar-toggler-icon"></span>
+				 </button>
+				 <div id="navbarContent" class="collapse navbar-collapse text-light">
+					<ul class="navbar-nav">
+						<li class="col-6 nav-item">
+							<a href="index.html" class="text-reset text-decoration-none">Accueil</a>
+						</li>
+						<li class="col-6 nav-item">
+							<a href="panier.html" class="text-reset text-decoration-none">Panier</a>
+						</li>
+					</ul>
+				</div>
 			</div>
 		</nav>
 	</header>
 
   <!--Page produit-->
-  <main id="main">
-    <div id="error">
-      <i id="error__logo" class="fas fa-exclamation-triangle"></i>
-      <p id="error__msg">Désolé une erreur avec l'API est survenue, ou la page démandée n'existe pas ! Veuillez réesayer</p>
+  <main class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class=" alert alert-danger" role="alert">
+          Désolé une erreur avec l'API est survenue, ou la page démandée n'existe pas ! Veuillez réesayer
+        </div>
+      </div>
     </div>
-    <section>
-      <h2>Nom du produit</h2>
-      <div class="">
-        <div class="">
-          <img src="" id="" alt="Photo du produit">
+    <section class="col-lg-6 card mx-auto my-4 py-2 shadow rounded">
+      <h2 class="card-title">Nom du produit</h2>
+      <div>
+        <div>
+          <img src="img/Oursinoco_peluche.jpg" class="col-12" alt="Photo du produit">
         </div>
 
-        <div class="">
+        <div class="card-text">
           <p class="">Description :</p>
           <label for="">Choisissez votre option :</label>
           <select name="" id="">
-            <option value="">Faites votre choix</option>
+            <option value="">Ourson vert</option>
+            <option value="">Ourson rose</option>
           </select>
           <p>Prix :</p>
           <div class="">
@@ -76,10 +82,13 @@
   </main>
 
   <!--footer-->
-	<footer class="container black bg-dark py-3">
-    <p>Copyright © 2020 Oursinoco by Orinoco - Tous droits réservés</p>
-    <p>Projet 5 - Parcours Developpeur Web - OpenClassrooms</p>
-  </footer>
+	<footer class="black bg-dark py-3 text-light">
+		<div class="container">
+			<p>Copyright © 2020 Oursinoco by Orinoco - Tous droits réservés</p>
+			<p>Projet 5 - Parcours Developpeur Web - OpenClassrooms</p>
+		</div>
+	</footer>
+
   	<!--Script JS-->
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
