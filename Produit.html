@@ -11,7 +11,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <link rel=stylesheet type=text/css href=./css/bootstrap.css>
   <link rel=stylesheet type=text/css href=css/style.css>
-  <script src="script.js"></script>
   <title>Orinoco, Produit</title>
 </head>
 
@@ -57,25 +56,26 @@
       <h2 class="card-title">Nom du produit</h2>
       <div>
         <div>
-          <img src="img/Oursinoco_peluche.jpg" class="col-12" alt="Photo du produit">
+          <img src="img/Oursinoco_peluche.jpg" class="col-12 oursonBasique" alt="Photo du produit">
         </div>
 
-        <div class="card-text">
-          <p class="">Description :</p>
+        <div class="card-text mx-2 my-4">
+          <p>Description : <span id="description"></span></p>
           <label for="">Choisissez votre option :</label>
-          <select name="" id="">
-            <option value="">Ourson vert</option>
-            <option value="">Ourson rose</option>
+          <select name="select-bear" id="selection">
+            <option value="select ourson">Selectionnez un ourson</option>
+            <option value="ourson vert">Ourson vert</option>
+            <option value="ourson rose">Ourson rose</option>
           </select>
           <p>Prix :</p>
-          <div class="">
-            <button class="">Mettre dans le panier</button>
+          <div id="bouton">
+            <button id="bouton">Mettre dans le panier</button>
           </div>
         </div>
       </div>
     </section>
 
-    <div class="alert alert-success my-2" role="alert">
+    <div id="alertProduit" class="alert alert-success my-2" role="alert">
       Félicitations ! Article enregistré dans le panier !
    </div>
 
@@ -93,7 +93,7 @@
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-	<script src="script.js"></script>
+	<script src="produit.js"></script>
 
 </body>
 </html>
