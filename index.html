@@ -9,7 +9,7 @@
   <script src="https://kit.fontawesome.com/3aa344abb3.js" crossorigin="anonymous"></script>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-  <link rel=stylesheet type=text/css href=./css/bootstrap.css>
+  <!-- <link rel=stylesheet type=text/css href=./css/bootstrap.css> -->
   <link rel=stylesheet type=text/css href=css/style.css>
   
   <title>Orinoco, Accueil</title>
@@ -22,7 +22,7 @@
 	<!--header-->
 	<header>
 		<h1 class="row">
-			<img class="col" src="img/logo_Orinoco.png" width="auto" height="400" class="img-fluid" alt="logo Orinoco">
+			<img class="col" src="img/logo_Orinoco.png" alt="logo Orinoco">
 		</h1>
 		<nav class="row navbar navbar-expand-lg navbar-dark bg-dark">
 			<div class="container">
@@ -33,10 +33,10 @@
 				 <div id="navbarContent" class="collapse navbar-collapse text-light">
 					<ul class="navbar-nav">
 						<li class="col-6 nav-item active">
-							<a href="index.html" class="text-reset text-decoration-none">Accueil</a>
+							<a href="index.html" class="text-reset text-decoration-none h6">Accueil</a>
 						</li>
 						<li class="col-6 nav-item">
-							<a href="panier.html" class="text-reset text-decoration-none">Panier</a>
+							<a href="panier.html" class="text-reset text-decoration-none h6">Panier</a>
 						</li>
 					</ul>
 				</div>
@@ -67,7 +67,7 @@
 			</div>
 		</div>
 		<div class="container">
-			<div class="row">
+			<div id="error" class="row">
 				<div class="col-lg-12">
 					<div class=" alert alert-danger" role="alert">
 						Désolé une erreur avec l'API est survenue, ou la page démandée n'existe pas ! Veuillez réesayer
@@ -75,26 +75,42 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-lg-4 mb-3">
+				<div  class="col-lg-4 mb-3 myCard">
 					<div class="card mx-auto shadow rounded p-2">
 						<h2 class="card-title h2 text-center mt-1">Oursinoco</h2>
-					   <img class="rounded" src="img/Oursinoco_peluche.jpg" width="auto" height="500" alt="Oursinoco - Vente en ligne d'ours en peluche faits à la main"/>
+					   <img id="card1" class="rounded" src="" width="auto" height="500" alt="Oursinoco - Vente en ligne d'ours en peluche faits à la main"/>
 					  <p class="card-text text-center mt-3">Ours en peluche personnalisable fait main par des artisans responsables</p>
 					  <a class="btn btn-secondary mb-3 shadow stretched-link" href="produit.html" role="button">Personnalisez votre ourson</a>
 					  </div>
 				</div>
-				<div class="col-lg-4 mb-3">
+				<div class="col-lg-4 mb-3 myCard">
 					<div class="card mx-auto shadow rounded p-2">
 						<h2 class="card-title h2 text-center mt-1">Oursinoco</h2>
-					   <img class="rounded" src="img/Oursinoco_peluche.jpg" width="auto" height="500" alt="Oursinoco - Vente en ligne d'ours en peluche faits à la main"/>
+					   <img id="card2" class="rounded" src="" width="auto" height="500" alt="Oursinoco - Vente en ligne d'ours en peluche faits à la main"/>
 					  <p class="card-text text-center mt-3">Ours en peluche personnalisable fait main par des artisans responsables</p>
 					  <a class="btn btn-secondary mb-3 shadow stretched-link" href="produit.html" role="button">Personnalisez votre ourson</a>
 					  </div>
 				</div>
-				<div class="col-lg-4 mb-3">
+				<div  class="col-lg-4 mb-3 myCard">
 					<div class="card mx-auto shadow rounded p-2">
 						<h2 class="card-title h2 text-center mt-1">Oursinoco</h2>
-					   <img class="rounded" src="img/Oursinoco_peluche.jpg" width="auto" height="500" alt="Oursinoco - Vente en ligne d'ours en peluche faits à la main"/>
+					   <img id="card3" class="rounded" src="" width="auto" height="500" alt="Oursinoco - Vente en ligne d'ours en peluche faits à la main"/>
+					  <p class="card-text text-center mt-3">Ours en peluche personnalisable fait main par des artisans responsables</p>
+					  <a class="btn btn-secondary mb-3 shadow stretched-link" href="produit.html" role="button">Personnalisez votre ourson</a>
+					  </div>
+				</div>
+				<div  class="col-lg-4 mb-3 myCard">
+					<div class="card mx-auto shadow rounded p-2">
+						<h2 class="card-title h2 text-center mt-1">Oursinoco</h2>
+					   <img id="card4" class="rounded" src="" width="auto" height="500" alt="Oursinoco - Vente en ligne d'ours en peluche faits à la main"/>
+					  <p class="card-text text-center mt-3">Ours en peluche personnalisable fait main par des artisans responsables</p>
+					  <a class="btn btn-secondary mb-3 shadow stretched-link" href="produit.html" role="button">Personnalisez votre ourson</a>
+					  </div>
+				</div>
+				<div class="col-lg-4 mb-3 myCard">
+					<div class="card mx-auto shadow rounded p-2">
+						<h2 class="card-title h2 text-center mt-1">Oursinoco</h2>
+					   <img id="card5" class="rounded" src="" width="auto" height="500" alt="Oursinoco - Vente en ligne d'ours en peluche faits à la main"/>
 					  <p class="card-text text-center mt-3">Ours en peluche personnalisable fait main par des artisans responsables</p>
 					  <a class="btn btn-secondary mb-3 shadow stretched-link" href="produit.html" role="button">Personnalisez votre ourson</a>
 					  </div>
@@ -102,14 +118,15 @@
 			</div>
 		</div>
 		<section class="row produit my-3">
-			<div class="mx-auto alert alert-success alert-dismissible fade show my-4" role="alert">
+			<div class="mx-auto alert alert-success alert-dismissible fade show my-4 alertIndex" role="alert">
 				<h5 class="alert-heading">N'oubliez pas votre carte de crédit avant de personnaliser votre ourson</h5>
 				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
 				   <span aria-hidden="true">×</span>
 				</button>
 			 </div>
         </section>
-
+        <section id="listeProduit">
+		  </section>
 	<!--footer-->
 	<footer class="black bg-dark py-3 text-light">
 		<div class="container">
@@ -122,7 +139,7 @@
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-	<script src="script.js"></script>
+	<script src="index.js"></script>
 
 </body>
 </html>

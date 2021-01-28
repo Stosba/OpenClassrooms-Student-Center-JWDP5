@@ -1,0 +1,25 @@
+$headings-font-family: "Roboto", Times, serif;
+
+$primary: #22A1ED;
+$dark: #04040C;
+$headings-color: #284876;
+$card-bg: #FCFCFC;
+
+
+header img {
+    width: auto;
+    height: 10em;
+    object-position: center;
+}
+
+#alertProduit {
+    display: none;
+}
+
+.alertIndex {
+    display: none;
+}
+
+#error {
+    display: none;
+}
