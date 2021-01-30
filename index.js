@@ -1,9 +1,5 @@
 /*index.js*/
 
-// /*Alerte carte de crédit*/
-// document.querySelector(".myCard").addEventListener("mousemove", function(){
-//     document.querySelector(".alertIndex").style.display = "block";
-// });
 
 // Liste des produits méthode 1
 // getAllTeddies = () => {
@@ -44,36 +40,40 @@
 
     /* création de la structure index HTML */
     teddies.forEach((teddy) => {
-      let produitContenant = document.createElement("section");
       let produitIllustration = document.createElement("div");
       let produitElement = document.createElement("div");
       let produitPhoto = document.createElement("img");
-      let produitNom = document.createElement("h3");
+      let produitNom = document.createElement("h2");
       let produitPrix = document.createElement("p");
       let produitAction = document.createElement("a");
   
       /*Ajout des attributs au balise index HTML */
-      produitContenant.setAttribute("class", "produit_contenant");
-      produitIllustration.setAttribute("class", "produit_illustration");
+      produitIllustration.setAttribute("class", "produit_element col-lg-4 mb-3 mx-auto myCard");
+      produitElement.setAttribute("class", "produit_element card mx-auto shadow rounded p-2");
       produitPhoto.setAttribute("src", teddy.imageUrl);
       produitPhoto.setAttribute("alt", "Photo de l'ours en peluche");
-      produitElement.setAttribute("class", "produit_element");
       produitNom.setAttribute("class", "produit_nom");
       produitPrix.setAttribute("class", "produit_prix");
       produitAction.setAttribute("href", "produit.html?id=" + teddy._id);
+      produitAction.setAttribute("class", "btn btn-secondary mb-3 shadow stretched-link");
+      produitAction.setAttribute("role", "button");
   
       /* Agencement des éléments index HTML */
-      listeProduit.appendChild(produitContenant);
       produitContenant.appendChild(produitIllustration);
-      produitIllustration.appendChild(produitPhoto);
-      produitContenant.appendChild(produitElement);
+      produitIllustration.appendChild(produitElement);
+      produitElement.appendChild(produitPhoto);
       produitElement.appendChild(produitNom);
       produitElement.appendChild(produitPrix);
       produitElement.appendChild(produitAction);
   
       /* Contenu des balises index HTML */
       produitNom.textContent = teddy.name;
-      produitPrix.textContent = teddy.price / 50 + " euros";
-      produitAction.textContent = "En savoir plus";
+      produitPrix.textContent = teddy.price / 100 + " euros";
+      produitAction.textContent = "Personnalisez votre ourson";
     });
-  }
+  };
+  
+/*Alerte carte de crédit*/
+// document.querySelector(".myCard").addEventListener("mousemove", function(){
+//     document.querySelector(".alertIndex").style.display = "block";
+// });

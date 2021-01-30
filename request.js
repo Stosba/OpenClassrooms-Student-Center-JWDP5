@@ -6,6 +6,8 @@ get = (url) => {
           resolve(JSON.parse(this.responseText));
           console.log("Connecté");
         } else {
+          console.log('API indisponible');
+          document.querySelector('#error').style.display = 'block';
         }
       };
       request.open("GET", url);
