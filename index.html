@@ -45,88 +45,39 @@
 	</header>
 
 	<!--Page d'accueil-->
-	
+		<!-- jumbotron -->
 		<div class="row">
 			<div class="col-lg-12">
 				<section class="jumbotron shadow rounded">
 					<div class="container">
 						<h2 class="display-5 text-center">Votre magasin en ligne d'ours en peluche faits à la main !</h2>
 					</div>
-				</section>
-		
-				<!-- <div class="carousel slide container" data-ride="carousel">
-					<div class="carousel-inner row">
-					   <div class="carousel-item active col col-md-9 col-lg-6 mx-auto">
-						  <img src="img/ourson_2.jpg" class="d-block w-100 rounded shadow" width="220" height="auto" alt="illustration ourson rose">
-					   </div>
-					   <div class="carousel-item col col-md-9 col-lg-6 mx-auto">
-						  <img src="img/ourson_1.jpg" class="d-block w-100 rounded shadow" width="220" height="auto" alt="illustration ourson gris">
-					   </div>
-					</div>
-				 </div> -->
+				</section>	
 			</div>
 		</div>
-		<div class="container">
+        <section id="listeProduit" class="container">
+			<!-- Erreur API -->
 			<div id="error" class="row">
-				<div class="col-lg-12">
+				<div class="col-lg-12"> 
 					<div class=" alert alert-danger" role="alert">
 						Désolé une erreur avec l'API est survenue, ou la page démandée n'existe pas ! Veuillez réesayer
 					</div>
 				</div>
 			</div>
-			<div class="row">
-				<div  class="col-lg-4 mb-3 myCard">
-					<div class="card mx-auto shadow rounded p-2">
-						<h2 class="card-title h2 text-center mt-1">Oursinoco</h2>
-					   <img id="card1" class="rounded" src="" width="auto" height="500" alt="Oursinoco - Vente en ligne d'ours en peluche faits à la main"/>
-					  <p class="card-text text-center mt-3">Ours en peluche personnalisable fait main par des artisans responsables</p>
-					  <a class="btn btn-secondary mb-3 shadow stretched-link" href="produit.html" role="button">Personnalisez votre ourson</a>
-					  </div>
-				</div>
-				<div class="col-lg-4 mb-3 myCard">
-					<div class="card mx-auto shadow rounded p-2">
-						<h2 class="card-title h2 text-center mt-1">Oursinoco</h2>
-					   <img id="card2" class="rounded" src="" width="auto" height="500" alt="Oursinoco - Vente en ligne d'ours en peluche faits à la main"/>
-					  <p class="card-text text-center mt-3">Ours en peluche personnalisable fait main par des artisans responsables</p>
-					  <a class="btn btn-secondary mb-3 shadow stretched-link" href="produit.html" role="button">Personnalisez votre ourson</a>
-					  </div>
-				</div>
-				<div  class="col-lg-4 mb-3 myCard">
-					<div class="card mx-auto shadow rounded p-2">
-						<h2 class="card-title h2 text-center mt-1">Oursinoco</h2>
-					   <img id="card3" class="rounded" src="" width="auto" height="500" alt="Oursinoco - Vente en ligne d'ours en peluche faits à la main"/>
-					  <p class="card-text text-center mt-3">Ours en peluche personnalisable fait main par des artisans responsables</p>
-					  <a class="btn btn-secondary mb-3 shadow stretched-link" href="produit.html" role="button">Personnalisez votre ourson</a>
-					  </div>
-				</div>
-				<div  class="col-lg-4 mb-3 myCard">
-					<div class="card mx-auto shadow rounded p-2">
-						<h2 class="card-title h2 text-center mt-1">Oursinoco</h2>
-					   <img id="card4" class="rounded" src="" width="auto" height="500" alt="Oursinoco - Vente en ligne d'ours en peluche faits à la main"/>
-					  <p class="card-text text-center mt-3">Ours en peluche personnalisable fait main par des artisans responsables</p>
-					  <a class="btn btn-secondary mb-3 shadow stretched-link" href="produit.html" role="button">Personnalisez votre ourson</a>
-					  </div>
-				</div>
-				<div class="col-lg-4 mb-3 myCard">
-					<div class="card mx-auto shadow rounded p-2">
-						<h2 class="card-title h2 text-center mt-1">Oursinoco</h2>
-					   <img id="card5" class="rounded" src="" width="auto" height="500" alt="Oursinoco - Vente en ligne d'ours en peluche faits à la main"/>
-					  <p class="card-text text-center mt-3">Ours en peluche personnalisable fait main par des artisans responsables</p>
-					  <a class="btn btn-secondary mb-3 shadow stretched-link" href="produit.html" role="button">Personnalisez votre ourson</a>
-					  </div>
-				</div>
+			<!-- Liste des oursons -->
+			<div id="produitContenant" class="row">
 			</div>
-		</div>
-		<section class="row produit my-3">
-			<div class="mx-auto alert alert-success alert-dismissible fade show my-4 alertIndex" role="alert">
-				<h5 class="alert-heading">N'oubliez pas votre carte de crédit avant de personnaliser votre ourson</h5>
-				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-				   <span aria-hidden="true">×</span>
-				</button>
-			 </div>
-        </section>
-        <section id="listeProduit">
-		  </section>
+			<!-- Alert carde de crédit -->
+			<section class="row produit my-3">
+				<div class="mx-auto alert alert-success alert-dismissible fade show my-4 alertIndex" role="alert">
+					<h5 class="alert-heading">N'oubliez pas votre carte de crédit avant de personnaliser votre ourson</h5>
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					   <span aria-hidden="true">×</span>
+					</button>
+				</div>
+			</section>
+		</section>
+
 	<!--footer-->
 	<footer class="black bg-dark py-3 text-light">
 		<div class="container">
@@ -139,6 +90,7 @@
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	<script src="request.js"></script>
 	<script src="index.js"></script>
 
 </body>
