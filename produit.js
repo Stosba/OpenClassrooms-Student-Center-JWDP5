@@ -2,10 +2,10 @@
 
 // Récupération de l'id du produit sélectionné dans la page précédente
 const productId = window.location.search.substr(1); 
+console.log(productId);
 
 // Récupération du produit avec l'id associé depuis le serveur
-get("http://localhost:3000/api/teddies/${productId}")
-    .then((response) => response.json())
+get(`http://localhost:3000/api/teddies/${productId}`)
     .then(response => {
         
 //   Lien avec la page produit HTML
@@ -26,8 +26,8 @@ get("http://localhost:3000/api/teddies/${productId}")
   detailTitle.setAttribute("class", "card-title");
   detailElement.setAttribute("class", "detail_element");
   detailIllustration.setAttribute("class", "detail_illustration");
-  detailPhoto.setAttribute("src", detailTeddies.imageUrl);
-  detailPhoto.setAttribute("alt", "Photo de " + detailTeddies.name);
+  detailPhoto.setAttribute("src", response.imageUrl);
+  detailPhoto.setAttribute("alt", "Photo de " + response.name);
   detailPhoto.setAttribute('class', "col-12");
   detailDescription.setAttribute("class", "detail_description");
   detailInformationPrix.setAttribute("class", "detail_information_prix");
@@ -45,11 +45,11 @@ get("http://localhost:3000/api/teddies/${productId}")
   detailElement.appendChild(detailAction);
 
 //   Contenu des balises produit HTML
-  detailNom.textContent = detailTeddies.name;
-  detailDescription.textContent = detailTeddies.description;
-  detailPrix.textContent = detailTeddies.price / 100 + " €";
+  detailTitle.textContent = response.name;
+  detailDescription.textContent = response.description;
+  detailPrix.textContent = response.price / 100 + " €";
 
-  detailTeddies.colors.forEach((teddy) => {
+  response.colors.forEach((teddy) => {
     let choixOption = document.createElement("option");
     document
       .getElementById("choix_option")
@@ -57,10 +57,10 @@ get("http://localhost:3000/api/teddies/${productId}")
     })
 })
 // Message d'erreur
-.catch(e => {
-    errorMessage();
-    console.log(e);
-});
+// .catch(e => {
+//     errorMessage();
+//     console.log(e);
+// });
 
 // Function ajout des articles au panier.
 const addItemCart = (item) => {
@@ -98,7 +98,7 @@ const addItemCart = (item) => {
 }
 
 itemConfirmation();
-alert("Vôtre produit a été ajouter au panier");
+alert("Votre produit a été ajouté au panier");
 }
 
 // alert

@@ -55,25 +55,13 @@
     </div>
 
     <section id="detailProduit" class="col-lg-6 card mx-auto my-4 py-2 shadow rounded">
-      <!-- <h2 class="card-title">Nom du produit</h2>
-      <div> element
-        <div> illustration
-          <img src="" class="col-12 oursonBasique" alt="Photo du produit">
-        </div>
-        <div class="card-text mx-2 my-4"> card txt & option
-          <p>Description : <span id="description"></span></p>
-          <label for="">Choisissez votre option :</label>
-          <select name="select-bear" id="selection">
-            <option value="select ourson">Selectionnez un ourson</option>
-            <option value="ourson vert">Ourson vert</option>
-            <option value="ourson rose">Ourson rose</option>
-          </select>
-          <p>Prix :</p>
-          <div id="bouton">
-            <button id="bouton">Mettre dans le panier</button>
-          </div>
-        </div>
-      </div> -->
+      <div id="detailOption" class="my-4">
+        <p>Choisissez votre couleur :</p>
+        <select name="option" id="choix_option" required aria-invalid="false">
+          <option disabled value="" selected>Choix couleur</option>
+        </select>
+      </div>
+      <button id="ajout_panier">Ajouter au panier</button>
     </section>
 
     <div id="alertProduit" class="alert alert-success my-2" role="alert">
@@ -96,6 +84,7 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
   <script src="request.js"></script>
   <script src="produit.js"></script>
+  <script src="panier.js"></script>
 
 </body>
 </html>

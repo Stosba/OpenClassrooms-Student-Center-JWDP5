@@ -1,29 +1,5 @@
 /*index.js*/
 
-
-// Liste des produits méthode 1
-// getAllTeddies = () => {
-//   return new Promise((resolve) => {
-//     let request = new XMLHttpRequest();
-//     request.onreadystatechange = function () {
-//       if (this.readyState == XMLHttpRequest.DONE && this.status >= 200 && this.status < 400) {
-//         resolve(JSON.parse(this.responseText));
-//         console.log("Connecté");
-//         document.querySelector('#card1').innerHTML = response.images.teddy_1.jpg;
-//         document.querySelector('#card2').innerHTML = response.images.teddy_2.jpg;
-//         document.querySelector('#card3').innerHTML = response.images.teddy_3.jpg;
-//         document.querySelector('#card4').innerHTML = response.images.teddy_4.jpg;
-//         document.querySelector('#card5').innerHTML = response.images.teddy_5.jpg;
-//       } else {
-//         console.log("error");
-//         document.querySelector('#error').style.display = 'block';
-//       }
-//     };
-//     request.open("GET", "http://localhost:3000/api/teddies/" + idNounours);
-//     request.send();
-//   });
-// };
-
 // Liste des produits méthode 2
 
   get("http://localhost:3000/api/teddies/")
@@ -41,6 +17,7 @@
 
     // création de la structure index HTML
     teddies.forEach((teddy) => {
+      console.log(teddy);
       let produitIllustration = document.createElement("div");
       let produitElement = document.createElement("div");
       let produitPhoto = document.createElement("img");
@@ -55,7 +32,7 @@
       produitPhoto.setAttribute("alt", "Photo de l'ours en peluche");
       produitNom.setAttribute("class", "produit_nom");
       produitPrix.setAttribute("class", "produit_prix");
-      produitAction.setAttribute("href", "produit.html?id=" + teddy._id);
+      produitAction.setAttribute("href", `produit.html?${teddy._id}`);
       produitAction.setAttribute("class", "btn btn-secondary mb-3 shadow stretched-link");
       produitAction.setAttribute("role", "button");
   
