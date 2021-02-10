@@ -1,10 +1,6 @@
-//-----PANIER----------//
+// PANIER
 
 //  appel des fonctions
-nombreIndexPanier();
-ajoutPanier();
-nombreProduitPanier();
-panierCreation();
 
 //Panier de l'utilisateur
 let panier = JSON.parse(localStorage.getItem("panier"));
@@ -34,17 +30,17 @@ if (localStorage.getItem("panier")) {
 
 ajoutPanier = () => {
   let acheter = document.getElementById("ajout_panier");
-  acheter.addEventListener("click", function () {
-    const ajout = get(`http://localhost:3000/api/teddies/${productId}`);
+  acheter.addEventListener("click", async function () {
+    const ajout = await get(`http://localhost:3000/api/teddies/${productId}`);
     panier.push(ajout);
     localStorage.setItem("panier", JSON.stringify(panier));
     console.log("Le produit a été ajouté au panier");
-    alert("Cet article a été ajouté dans votre panier");
+    alert("Cet article a été ajouté à votre panier");
     location.reload();
   });
 };
 
-//------Page Panier-------//
+// Page Panier
 
 panierCreation = () => {
     if (panier.length > 0) {
@@ -118,7 +114,6 @@ panierCreation = () => {
         console.log(panier[i].name);
       };
   
-  
       //Dernière ligne du tableau : Total
       recap.appendChild(ligneTotal);
       ligneTotal.appendChild(colonneTotal);
@@ -142,7 +137,7 @@ panierCreation = () => {
       document.getElementById("sommeTotal").textContent = sommeTotal + " €";
     }
   };
-  
+
   annulerArticle = (i) => {
    panier.splice(i, 1);
     localStorage.clear();
