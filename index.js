@@ -55,3 +55,9 @@
 document.querySelector('#listeProduit').addEventListener('mousemove', function(){
   document.querySelector('.alertIndex').style.display = 'block';
 });
+
+//Affichage du nombre d'article dans le panier
+function nombreIndexPanier() {
+  let indexPanier = document.getElementById("indexPanier");
+  indexPanier.textContent = panier.length;
+}

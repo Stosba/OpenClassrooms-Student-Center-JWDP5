@@ -1,9 +1,29 @@
-body {
-  background-color: red;
+header img {
+  width: auto;
+  height: 10em;
+  -o-object-position: center;
+     object-position: center;
+}
+
+#alertProduit {
+  display: none;
+}
+
+.alertIndex {
+  display: none;
+}
+
+#error {
+  display: none;
 }
 
 img {
-  display: none;
+  height: 500px;
+  width: auto;
+}
+
+.fas {
+  margin-left: 1em;
 }
 
 /*!
