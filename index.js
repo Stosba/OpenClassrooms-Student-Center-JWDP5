@@ -1,6 +1,6 @@
 /*index.js*/
 
-// Liste des produits méthode 2
+// chargement de la liste des produits
 
   get("http://localhost:3000/api/teddies/")
   .then(teddies => {

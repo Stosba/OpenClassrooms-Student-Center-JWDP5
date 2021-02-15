@@ -220,11 +220,11 @@ checkInput = () => {
   if (checkMessage != "") {
     alert("Attention certaines données ne sont pas conformes :" + "\n" + checkMessage);
   }
-  //Si le formulaire est validé => construction de l'objet contact
+  //Si le formulaire est valide, construction de l'objet contact
   else {
     contact = {
-      lastName: nom,
       firstName: prenom,
+      lastName: nom,
       address: adresse,
       city: ville,
       email: email,
@@ -235,9 +235,9 @@ checkInput = () => {
 
 //Vérification du panier
 checkPanier = () => {
-  //Vérifier qu'il y ai au moins un produit dans le panier
+  //Vérifier qu'il y ait au moins un produit dans le panier
   let etatPanier = JSON.parse(localStorage.getItem("panier"));
-  //Si le panier est vide ou null
+  //Si le panier est vide
   if  (etatPanier.length < 1 || etatPanier == null) {
     alert("Votre panier est vide");
     return false;
@@ -248,6 +248,29 @@ checkPanier = () => {
 };
 
 /*Envoi à l'API */
+//Tableau et objet demandé par l'API pour la commande
+let contact;
+let products = [];
+let url = "http://localhost:3000/api/teddies/order";
+
+const envoiFormulaire = (sendForm, url) => {
+  return new Promise((resolve) => {
+    let request = new XMLHttpRequest();
+    request.onload = function () {
+      if (this.readyState == XMLHttpRequest.DONE && this.status == 201) {
+        sessionStorage.setItem("order", this.responseText);
+        window.location = "./Confirmation_de_commande.html";
+        resolve(JSON.parse(this.responseText));
+        console.log(sendForm);
+      } else {
+      }
+    };
+    request.open("POST", url);
+    request.setRequestHeader("Content-Type", "application/json");
+    request.send(sendForm);
+    console.log(sendForm);
+  });
+};
 
 confirmCommande = () => {
   let commander = document.getElementById("form");
@@ -279,4 +302,21 @@ confirmCommande = () => {
       console.log("ERROR");
     }
   });
+};
+
+//Récupération des informations pour affichage sur la page de confirmation
+retourOrder = () => {
+  if (sessionStorage.getItem("order") != null) {
+    let order = JSON.parse(sessionStorage.getItem("order"));
+    document.getElementById("firstName").innerHTML = order.contact.firstName;
+    document.getElementById("orderId").innerHTML = order.orderId;
+    console.log(order);
+    sessionStorage.removeItem("order");
+
+  }
+  //Redirection vers l'accueil
+  else {
+    alert("Merci pour vote commande. A bientôt");
+    window.location = "./index.html";
+  }
 };
