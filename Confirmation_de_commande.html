@@ -9,7 +9,7 @@
   <script src="https://kit.fontawesome.com/3aa344abb3.js" crossorigin="anonymous"></script>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-  <link rel=stylesheet type=text/css href=./css/bootstrap.css>
+  <!-- <link rel=stylesheet type=text/css href=./css/bootstrap.css> -->
   <link rel=stylesheet type=text/css href=css/style.css>
   <title>Orinoco, Confirmation de commande</title>
 </head>
@@ -20,10 +20,10 @@
 
   <!--header-->
 	<header>
-		<h1 class="row">
-			<img class="col" src="img/logo_Orinoco.png" width="auto" height="400" alt="logo Orinoco">
+		<h1 class="row m-0">
+			<img class="col p-0" src="img/logo_Orinoco.png" alt="logo Orinoco">
 		</h1>
-		<nav class="row navbar navbar-expand-lg navbar-dark bg-dark">
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 			<div class="container">
 				<a class="navbar-brand" href="index.html">Orinoco</a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
@@ -34,7 +34,7 @@
 						<li class="col-6 nav-item">
 							<a href="index.html" class="text-reset text-decoration-none">Accueil</a>
 						</li>
-						<li class="col-6 nav-item">
+						<li class="co-6 nav-item">
 							<a href="panier.html" class="text-reset text-decoration-none">Panier</a>
 						</li>
 					</ul>
@@ -49,12 +49,18 @@
       Félicitations ! Vous avez réussi !
     </div>
 
-    <div class="col-6 mx-auto">
-     <h2><i class="fas fa-check"></i> Merci pour votre achat <span id="lastName"></span> !</h2>
-      <div class="col-6">
-        <p>numéro de commande : <span id="orderId"></span></p>
-      </div>
-    </div>
+    <div class="col-9 mx-auto">
+     <h2><i class="fas fa-check"></i> Merci pour votre achat <span id="firstName"></span> !</h2>
+      <div>
+		<p>Numéro de commande : <span id="orderId"></span></p>
+		<p>Somme totale : <span id="sommeTotal"></span></p>
+	  </div>
+	</div>
+	
+	<div id="confirmation-recap">
+
+	</div>
+
   </section>
 
   <!--footer-->
@@ -69,6 +75,13 @@
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-	<script src="confirmation_de_commande.js"></script>
+	<script src="panier.js"></script>
+	<script src="index.js"></script>
+	<script src="request.js"></script>
+	<script>panierCreation();</script>
+      <script>
+        retourOrder();
+	  </script>
+	  <script>confirmRecap();</script>
 </body>
 </html>

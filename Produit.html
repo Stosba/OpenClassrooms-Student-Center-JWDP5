@@ -9,7 +9,6 @@
   <script src="https://kit.fontawesome.com/3aa344abb3.js" crossorigin="anonymous"></script>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-  <!-- <link rel=stylesheet type=text/css href=./css/bootstrap.css> -->
   <link rel=stylesheet type=text/css href=css/style.css>
   <title>Orinoco, Produit</title>
 </head>
@@ -20,10 +19,10 @@
 
   <!--header-->
 	<header>
-		<h1 class="row">
-			<img class="col" src="img/logo_Orinoco.png" width="auto" height="400" alt="logo Orinoco">
+		<h1 class="row m-0">
+			<img class="col p-0" src="img/logo_Orinoco.png" alt="logo Orinoco">
 		</h1>
-		<nav class="row navbar navbar-expand-lg navbar-dark bg-dark">
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 			<div class="container">
 				<a class="navbar-brand" href="index.html">Orinoco</a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
@@ -35,7 +34,7 @@
 							<a href="index.html" class="text-reset text-decoration-none">Accueil</a>
 						</li>
 						<li class="col-8 nav-item">
-							<a href="panier.html" class="text-reset text-decoration-none">Panier (<span id="produitPanier"></span>)</a>
+							<a href="panier.html" class="text-reset text-decoration-none">Panier <span id="produitPanier"></span></a>
 						</li>
 					</ul>
 				</div>
@@ -61,12 +60,12 @@
           <option disabled value="" selected>Choix couleur</option>
         </select>
       </div>
-      <button id="ajout_panier">Ajouter au panier</button>
+      <button id="ajout_panier" class="btn btn-primary">Ajouter au panier</button>
     </section>
 
-    <div id="alertProduit" class="alert alert-success my-2" role="alert">
-      Félicitations ! Article enregistré dans le panier !
-   </div>
+    <div id="panierAdd">
+      <!-- alert ajout au panier -->
+    </div>
 
   </main>
 
@@ -88,9 +87,9 @@
   <script>
     ajoutPanier();
   </script>
-  <script>
+  <!-- <script>
     nombreProduitPanier();
-  </script>
+  </script> -->
 
 </body>
 </html>

@@ -1,6 +1,6 @@
 /*index.js*/
 
-// Liste des produits méthode 2
+// chargement de la liste des produits
 
   get("http://localhost:3000/api/teddies/")
   .then(teddies => {
@@ -9,10 +9,8 @@
   })
 
   function displayTeddies(teddies) {
-    // const teddies = await getAllTeddies();
 
     //  Lien avec la page index HTML
-
     let listeProduit = document.getElementById("listeProduit");
 
     // création de la structure index HTML
@@ -33,7 +31,7 @@
       produitNom.setAttribute("class", "produit_nom");
       produitPrix.setAttribute("class", "produit_prix");
       produitAction.setAttribute("href", `produit.html?${teddy._id}`);
-      produitAction.setAttribute("class", "btn btn-secondary mb-3 shadow stretched-link");
+      produitAction.setAttribute("class", "btn btn-primary mb-3 shadow stretched-link");
       produitAction.setAttribute("role", "button");
   
       // Agencement des éléments index HTML

@@ -1,9 +1,37 @@
-body {
-  background-color: red;
+header img {
+  width: auto;
+  height: 10em;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.alertIndex {
+  display: none;
+}
+
+#error {
+  display: none;
 }
 
 img {
-  display: none;
+  height: 500px;
+  width: auto;
+}
+
+nav {
+  padding: none;
+}
+
+header {
+  background-color: #f3e9f1;
+}
+
+td {
+  padding: 25%;
+}
+
+#indexPanier {
+  background-color: white;
 }
 
 /*!
