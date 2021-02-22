@@ -9,10 +9,8 @@
   })
 
   function displayTeddies(teddies) {
-    // const teddies = await getAllTeddies();
 
     //  Lien avec la page index HTML
-
     let listeProduit = document.getElementById("listeProduit");
 
     // création de la structure index HTML
@@ -33,7 +31,7 @@
       produitNom.setAttribute("class", "produit_nom");
       produitPrix.setAttribute("class", "produit_prix");
       produitAction.setAttribute("href", `produit.html?${teddy._id}`);
-      produitAction.setAttribute("class", "btn btn-secondary mb-3 shadow stretched-link");
+      produitAction.setAttribute("class", "btn btn-primary mb-3 shadow stretched-link");
       produitAction.setAttribute("role", "button");
   
       // Agencement des éléments index HTML
@@ -55,9 +53,3 @@
 document.querySelector('#listeProduit').addEventListener('mousemove', function(){
   document.querySelector('.alertIndex').style.display = 'block';
 });
-
-//Affichage du nombre d'article dans le panier
-function nombreIndexPanier() {
-  let indexPanier = document.getElementById("indexPanier");
-  indexPanier.textContent = panier.length;
-}

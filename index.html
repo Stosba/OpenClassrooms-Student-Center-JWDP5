@@ -9,7 +9,6 @@
   <script src="https://kit.fontawesome.com/3aa344abb3.js" crossorigin="anonymous"></script>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-  <!-- <link rel=stylesheet type=text/css href=./css/bootstrap.css> -->
   <link rel=stylesheet type=text/css href=css/style.css>
   
   <title>Orinoco, Accueil</title>
@@ -21,10 +20,10 @@
 
 	<!--header-->
 	<header>
-		<h1 class="row">
-			<img class="col" src="img/logo_Orinoco.png" alt="logo Orinoco">
+		<h1 class="row m-0">
+			<img class="col p-0" src="img/logo_Orinoco.png" alt="logo Orinoco">
 		</h1>
-		<nav class="row navbar navbar-expand-lg navbar-dark bg-dark">
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 			<div class="container">
 				<a class="navbar-brand" href="index.html">Orinoco</a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
@@ -36,7 +35,7 @@
 							<a href="index.html" class="text-reset text-decoration-none h6">Accueil</a>
 						</li>
 						<li class="col-8 nav-item">
-							<a href="panier.html" class="text-reset text-decoration-none h6">Panier (<span id="indexPanier"></span>)</a>
+							<a href="panier.html" class="text-reset text-decoration-none h6">Panier <span id="indexPanier"></span></a>
 						</li>
 					</ul>
 				</div>
@@ -46,8 +45,8 @@
 
 	<!--Page d'accueil-->
 		<!-- jumbotron -->
-		<div class="row">
-			<div class="col-lg-12">
+		<div>
+			<div>
 				<section class="jumbotron shadow rounded">
 					<div class="container">
 						<h2 class="display-5 text-center">Votre magasin en ligne d'ours en peluche faits à la main !</h2>
@@ -93,7 +92,7 @@
 	<script src="request.js"></script>
 	<script src="index.js"></script>
 	<script src="panier.js"></script>
-	<script>nombreIndexPanier()</script>
+	<!-- <script>nombreIndexPanier()</script> -->
 
 </body>
 </html>

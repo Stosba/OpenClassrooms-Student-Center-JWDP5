@@ -12,10 +12,6 @@ header img {
     object-position: center;
 }
 
-#alertProduit {
-    display: none;
-}
-
 .alertIndex {
     display: none;
 }
@@ -29,6 +25,18 @@ img {
     width: auto;
 }
 
-.fas {
-    margin-left: 1em;
+nav {
+    padding: none;
+}
+
+header {
+    background-color: #f3e9f1;
+}
+
+td {
+    padding: 25%;
+}
+
+#indexPanier {
+   background-color: white; 
 }

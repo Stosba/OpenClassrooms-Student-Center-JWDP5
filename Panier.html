@@ -9,7 +9,6 @@
   <script src="https://kit.fontawesome.com/3aa344abb3.js" crossorigin="anonymous"></script>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-  <!-- <link rel=stylesheet type=text/css href=./css/bootstrap.css> -->
   <link rel=stylesheet type=text/css href=css/style.css>
   <title>Orinoco, Panier</title>
 </head>
@@ -20,10 +19,10 @@
 
   <!--header-->
 	<header>
-		<h1 class="row">
-			<img class="col" src="img/logo_Orinoco.png" width="auto" height="400" alt="logo Orinoco">
+		<h1 class="row m-0">
+			<img class="col p-0" src="img/logo_Orinoco.png" alt="logo Orinoco">
 		</h1>
-		<nav class="row navbar navbar-expand-lg navbar-dark bg-dark">
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 			<div class="container">
 				<a class="navbar-brand" href="index.html">Orinoco</a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
@@ -51,23 +50,24 @@
           Votre panier est vide
         </div>
       </div>
+  <!-- recap du panier -->
       <div id="panier-recap">
 
       </div>
     </div>
-
-    <div class="card p-4 ">
-      <form method="post" name="panier" id="form">
+  <!-- formulaire -->
+    <div class="card p-4 mb-4">
+      <!-- <form method="post" name="panier" id="form">
         <fieldset>
           <legend>Civilité</legend>
           <div class="form-group">
             <div class="">
               <label for="Nom">Nom : </label>
-              <input type="text" id="nom" required name="formNom">
+              <input type="text" id="nom" name="formNom">
             </div>
             <div class="">
               <label for="">Prénom :</label>
-              <input type="text" id="prenom" required name="formPrenom">
+              <input type="text" id="prenom"  name="formPrenom">
             </div>
           </div>
         </fieldset> 
@@ -75,26 +75,81 @@
           <legend>Coordonnées</legend>
           <div class="form-group">
             <label for="Mail">E-mail :</label>
-            <input type="email" id="email" required name="Mail">
+            <input type="email" id="email"  name="Mail">
           </div>
           <div class="form-group">
             <label for="Adresse">Adresse :</label>
-            <input type="text" id="adresse" required name="Adresse">
+            <input type="text" id="adresse"  name="Adresse">
           </div>
           <div class="form-group">
             <label for="Ville">Ville :</label>
-            <input type="text" id="ville" required name="Ville">
+            <input type="text" id="ville"  name="Ville">
           </div>
         </fieldset> 
         <button id="commander" type="submit" name="commander">
           Commander
         </button>
+      </form> -->
+
+      <form id="form" class="needs-validation" name="panier" novalidate>
+        <div class="form-row">
+          <div class="col-md-6 mb-3">
+            <label for="Prenom">Prénom</label>
+            <input type="text" class="form-control" id="prenom" name="formPrenom" required>
+            <div class="valid-feedback">
+              Prénom accepté !
+            </div>
+            <div class="invalid-feedback">
+              Veuillez vérifier les informations concernant votre prénom. Les caractères spéciaux ou les chiffres ne sont pas autorisés
+            </div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="Nom">Nom</label>
+            <input type="text" class="form-control" id="nom" name="formNom"required>
+            <div class="valid-feedback">
+              Nom accepté !
+            </div>
+            <div class="invalid-feedback">
+              Veuillez vérifier les informations concernant votre nom. Les caractères spéciaux ou les chiffres ne sont pas autorisés
+            </div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col-md-6 mb-3">
+            <label for="Adresse">Adresse</label>
+            <input type="text" class="form-control" id="adresse" name="Adresse" required>
+            <div class="valid-feedback">
+              Adresse acceptée !
+            </div>
+            <div class="invalid-feedback">
+              Veuillez vérifier les informations concernant votre adresse postale. Les caractères spéciaux ou les chiffres ne sont pas autorisés
+            </div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="Ville">Ville</label>
+            <input type="text" class="form-control" id="ville" name="Ville" required>
+            <div class="valid-feedback">
+              Ville acceptée !
+            </div>
+            <div class="invalid-feedback">
+              Veuillez vérifier les informations concernant votre ville. Les caractères spéciaux ne sont pas autorisés
+            </div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="Mail">Email</label>
+            <input type="text" class="form-control" id="email" name="Mail" required>
+            <div class="valid-feedback">
+              Email accepté !
+            </div>
+            <div class="invalid-feedback">
+                Veuillez vérifier les informations concernant votre email. Les caractères spéciaux ne sont pas autorisés
+            </div>
+          </div>
+        </div>
+        <button id="commander" class="btn btn-primary" type="submit">Commander</button>
       </form>
     </div>
 
-    <div class="alert alert-success my-2" role="alert">
-      Félicitations ! Article enregistré !
-   </div>
   </main>
 
     <!--footer-->
@@ -117,5 +172,6 @@
   <script>
     confirmCommande();
   </script>
+  <script>confirmRecap();</script>
 </body>
 </html>

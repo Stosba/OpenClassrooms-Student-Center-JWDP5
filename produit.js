@@ -55,9 +55,4 @@ get(`http://localhost:3000/api/teddies/${productId}`)
       .getElementById("choix_option")
       .appendChild(choixOption).innerHTML = teddy;
     })
-})
-
-// alert
-// document.querySelector("#bouton").addEventListener("click", function(){
-//     document.querySelector("#alertProduit").style.display = "block";
-// });
+});
