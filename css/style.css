@@ -1,12 +1,8 @@
 @charset "UTF-8";
-header img {
+h1 img {
   width: auto;
   height: 10em;
   object-position: center;
-}
-
-#alertProduit {
-  display: none;
 }
 
 .alertIndex {
@@ -17,9 +13,16 @@ header img {
   display: none;
 }
 
-img {
-  height: 500px;
-  width: auto;
+main img {
+  object-fit: cover;
+}
+
+i {
+  font-style: normal !important;
+}
+
+table {
+  width: 100%;
 }
 
 /*!

@@ -6,7 +6,7 @@ $headings-color: #284876;
 $card-bg: #FCFCFC;
 
 
-header img {
+h1 img {
     width: auto;
     height: 10em;
     object-position: center;
@@ -20,23 +20,14 @@ header img {
     display: none;
 }
 
-img {
-    height: 500px;
-    width: auto;
+main img {
+    object-fit: cover;
 }
 
-nav {
-    padding: none;
+i {
+    font-style: normal !important; 
 }
 
-header {
-    background-color: #f3e9f1;
-}
-
-td {
-    padding: 25%;
-}
-
-#indexPanier {
-   background-color: white; 
+table {
+    width: 100%;
 }
