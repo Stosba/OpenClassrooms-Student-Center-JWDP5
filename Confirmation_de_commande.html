@@ -19,50 +19,51 @@
 <body>
 
   <!--header-->
-	<header>
-		<h1 class="row m-0">
-			<img class="col p-0" src="img/logo_Orinoco.png" alt="logo Orinoco">
-		</h1>
-		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-			<div class="container">
-				<a class="navbar-brand" href="index.html">Orinoco</a>
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
-					<span class="navbar-toggler-icon"></span>
-				 </button>
-				 <div id="navbarContent" class="collapse navbar-collapse text-light">
-					<ul class="navbar-nav">
-						<li class="col-6 nav-item">
-							<a href="index.html" class="text-reset text-decoration-none">Accueil</a>
-						</li>
-						<li class="co-6 nav-item">
-							<a href="panier.html" class="text-reset text-decoration-none">Panier</a>
-						</li>
-					</ul>
-				</div>
+  <header>
+	<h1 class="row m-0">
+		<img class="col p-0" src="img/logo_Orinoco.png" alt="logo Orinoco">
+	</h1>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<div class="container">
+			<a class="navbar-brand" href="index.html">Orinoco</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
+				<span class="navbar-toggler-icon"></span>
+			 </button>
+			 <div id="navbarContent" class="collapse navbar-collapse text-light">
+				<ul class="navbar-nav">
+					<li class="col-6 nav-item active">
+						<a href="index.html" class="text-reset text-decoration-none h6">Accueil</a>
+					</li>
+					<li class="col-8 nav-item">
+						<a href="panier.html" class="text-reset text-decoration-none h6">Panier <span id="indexPanier"></span></a>
+					</li>
+				</ul>
 			</div>
-		</nav>
-	</header>
+		</div>
+	</nav>
+</header>
 
   <!--Confirmation de commande-->
+<main class="container">
   <section class="row">
     <div class="col-12 alert alert-success" role="alert">
       Félicitations ! Vous avez réussi !
     </div>
 
-    <div class="col-9 mx-auto">
+    <div class="col-lg-6 col-9 mx-auto">
      <h2><i class="fas fa-check"></i> Merci pour votre achat <span id="firstName"></span> !</h2>
       <div>
 		<p>Numéro de commande : <span id="orderId"></span></p>
-		<p>Somme totale : <span id="sommeTotal"></span></p>
+		<p>Somme totale : <span id="sommeConfirmTotal"></span></p>
 	  </div>
 	</div>
 	
-	<div id="confirmation-recap">
+	<div id="confirmation-recap" class="row">
 
 	</div>
 
   </section>
-
+</main>
   <!--footer-->
 	<footer class="black bg-dark py-3 text-light">
 		<div class="container">
@@ -78,10 +79,9 @@
 	<script src="panier.js"></script>
 	<script src="index.js"></script>
 	<script src="request.js"></script>
-	<script>panierCreation();</script>
-      <script>
-        retourOrder();
-	  </script>
-	  <script>confirmRecap();</script>
+	<script src="confirmCommande.js"></script>
+	<script>
+	// panierCreation();
+	</script>
 </body>
 </html>

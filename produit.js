@@ -56,3 +56,35 @@ get(`http://localhost:3000/api/teddies/${productId}`)
       .appendChild(choixOption).innerHTML = teddy;
     })
 });
+
+//Ajout de l'article au panier de l'utilisateur
+
+ajoutPanier = () => {
+  let acheter = document.getElementById("ajout_panier");
+  acheter.addEventListener("click", async function () {
+    const ajout = await get(`http://localhost:3000/api/teddies/${productId}`);
+    panier.push(ajout);
+    localStorage.setItem("panier", JSON.stringify(panier));
+    console.log("Le produit a été ajouté au panier");
+    // alert ajout au panier
+    let panierAdd = document.getElementById("panierAdd");
+    let alertProduit = document.createElement("div");
+    panierAdd.appendChild(alertProduit);
+    alertProduit.setAttribute('class', 'alert alert-success alert-dismissible fade show my-2');
+    alertProduit.setAttribute("role", "alert");
+    alertProduit.innerHTML = "Félicitations ! Article enregistré dans le panier !"
+    nombreIndexPanier();
+    nombreProduitPanier();
+  });
+};
+ajoutPanier();
+
+// Affichage du nombre d'article dans le panier
+
+let panier = JSON.parse(localStorage.getItem("panier"));
+
+function nombreProduitPanier() {
+  let produitPanier = document.getElementById("produitPanier");
+  produitPanier.textContent = panier.length;
+}
+nombreProduitPanier();

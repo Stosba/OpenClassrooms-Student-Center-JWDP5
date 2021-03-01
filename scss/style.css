@@ -14,8 +14,8 @@ header img {
 }
 
 img {
-  height: 500px;
-  width: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 nav {
