@@ -72,9 +72,8 @@ ajoutPanier = () => {
     panierAdd.appendChild(alertProduit);
     alertProduit.setAttribute('class', 'alert alert-success alert-dismissible fade show my-2');
     alertProduit.setAttribute("role", "alert");
-    alertProduit.innerHTML = "Félicitations ! Article enregistré dans le panier !"
-    nombreIndexPanier();
-    nombreProduitPanier();
+    alertProduit.innerHTML = "Félicitations ! Article enregistré dans le panier !";
+    setTimeout(function(){ window.location.reload(); }, 3000);
   });
 };
 ajoutPanier();
@@ -86,5 +85,5 @@ let panier = JSON.parse(localStorage.getItem("panier"));
 function nombreProduitPanier() {
   let produitPanier = document.getElementById("produitPanier");
   produitPanier.textContent = panier.length;
-}
+};
 nombreProduitPanier();

@@ -3,18 +3,6 @@
 //Panier de l'utilisateur
 let panier = JSON.parse(localStorage.getItem("panier"));
 
-// // Affichage du nombre d'article dans le panier
-
-// function nombreIndexPanier() {
-//   let indexPanier = document.getElementById("indexPanier");
-//   indexPanier.textContent = panier.length;
-// }
-
-// function nombreProduitPanier() {
-//   let produitPanier = document.getElementById("produitPanier");
-//   produitPanier.textContent = panier.length;
-// }
-
 //Vérification et initialisation du panier
 if (localStorage.getItem("panier")) {
   console.log(panier);
